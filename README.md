@@ -10,6 +10,7 @@ Custom view for easily displaying in-app push notification that feels like defau
 * Automatic handling for more than 1 push - Try calling `showWithNotificationMessage:` repeatedly to see how this works (Shown in the example app).
 * Action block for tapping the message can be changed at any time - even after the view is already on screen! (Use `setMessageAction:` to set it). 
 * Optionaly hide the view after X seconds (Default is 5), remove comment in code the make this work...
+* Supports iOS 8 now
 
 ## Usage
 
@@ -53,11 +54,8 @@ The default 5 seconds delay is set in a define in the head of the `.m` file:
 @interface AGPushNoteView() ...
 ```
 
-## Things to see, stuff to do, places to go
-* Add cool parallax effect to the iOS7 view (Supposed to be easy, less easy when subclassing `UIToolbar` instead `UIView`...).
-* Add option to put small icon next to the message.
-* Add option to switch the X button to the right side.
 
 ## Credits
 
 AGNoteView was created by [Aviel Gross](http://bit.ly/aviel) in the development of [TLV Airport](https://itunes.apple.com/us/app/tel-aviv-int-airport-nml-t/id796888961?mt=8)
+Info Objects made by Vlad E. Borovtsov 
