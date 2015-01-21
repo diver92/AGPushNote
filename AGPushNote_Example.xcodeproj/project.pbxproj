@@ -18,6 +18,7 @@
 		299C567D190F867300C8AECF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 299C567C190F867300C8AECF /* Images.xcassets */; };
 		299C569D190F872600C8AECF /* AGPushNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 299C569B190F872600C8AECF /* AGPushNoteView.m */; };
 		299C569E190F872600C8AECF /* AGPushNoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 299C569C190F872600C8AECF /* AGPushNoteView.xib */; };
+		A45BB2C01A6FB975003760C7 /* AGPushNoteInfoObj.m in Sources */ = {isa = PBXBuildFile; fileRef = A45BB2BF1A6FB975003760C7 /* AGPushNoteInfoObj.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,10 +36,11 @@
 		299C5679190F867300C8AECF /* AGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGViewController.h; sourceTree = "<group>"; };
 		299C567A190F867300C8AECF /* AGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGViewController.m; sourceTree = "<group>"; };
 		299C567C190F867300C8AECF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		299C5683190F867300C8AECF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		299C569A190F872600C8AECF /* AGPushNoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPushNoteView.h; sourceTree = "<group>"; };
 		299C569B190F872600C8AECF /* AGPushNoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPushNoteView.m; sourceTree = "<group>"; };
 		299C569C190F872600C8AECF /* AGPushNoteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGPushNoteView.xib; sourceTree = "<group>"; };
+		A45BB2BE1A6FB975003760C7 /* AGPushNoteInfoObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGPushNoteInfoObj.h; path = AGPushNote/AGPushNoteInfoObj.h; sourceTree = SOURCE_ROOT; };
+		A45BB2BF1A6FB975003760C7 /* AGPushNoteInfoObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGPushNoteInfoObj.m; path = AGPushNote/AGPushNoteInfoObj.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +80,6 @@
 				299C5664190F867300C8AECF /* Foundation.framework */,
 				299C5666190F867300C8AECF /* CoreGraphics.framework */,
 				299C5668190F867300C8AECF /* UIKit.framework */,
-				299C5683190F867300C8AECF /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,6 +116,8 @@
 				299C569A190F872600C8AECF /* AGPushNoteView.h */,
 				299C569B190F872600C8AECF /* AGPushNoteView.m */,
 				299C569C190F872600C8AECF /* AGPushNoteView.xib */,
+				A45BB2BE1A6FB975003760C7 /* AGPushNoteInfoObj.h */,
+				A45BB2BF1A6FB975003760C7 /* AGPushNoteInfoObj.m */,
 			);
 			name = "PushNote View";
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A45BB2C01A6FB975003760C7 /* AGPushNoteInfoObj.m in Sources */,
 				299C569D190F872600C8AECF /* AGPushNoteView.m in Sources */,
 				299C5675190F867300C8AECF /* AGAppDelegate.m in Sources */,
 				299C567B190F867300C8AECF /* AGViewController.m in Sources */,
