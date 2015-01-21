@@ -16,24 +16,9 @@
 		299C5678190F867300C8AECF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 299C5676190F867300C8AECF /* Main.storyboard */; };
 		299C567B190F867300C8AECF /* AGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 299C567A190F867300C8AECF /* AGViewController.m */; };
 		299C567D190F867300C8AECF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 299C567C190F867300C8AECF /* Images.xcassets */; };
-		299C5684190F867300C8AECF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 299C5683190F867300C8AECF /* XCTest.framework */; };
-		299C5685190F867300C8AECF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 299C5664190F867300C8AECF /* Foundation.framework */; };
-		299C5686190F867300C8AECF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 299C5668190F867300C8AECF /* UIKit.framework */; };
-		299C568E190F867300C8AECF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 299C568C190F867300C8AECF /* InfoPlist.strings */; };
-		299C5690190F867300C8AECF /* AGPushNote_ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 299C568F190F867300C8AECF /* AGPushNote_ExampleTests.m */; };
 		299C569D190F872600C8AECF /* AGPushNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 299C569B190F872600C8AECF /* AGPushNoteView.m */; };
 		299C569E190F872600C8AECF /* AGPushNoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 299C569C190F872600C8AECF /* AGPushNoteView.xib */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		299C5687190F867300C8AECF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 299C5659190F867300C8AECF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 299C5660190F867300C8AECF;
-			remoteInfo = AGPushNote_Example;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		299C5661190F867300C8AECF /* AGPushNote_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AGPushNote_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,11 +35,7 @@
 		299C5679190F867300C8AECF /* AGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGViewController.h; sourceTree = "<group>"; };
 		299C567A190F867300C8AECF /* AGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGViewController.m; sourceTree = "<group>"; };
 		299C567C190F867300C8AECF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		299C5682190F867300C8AECF /* AGPushNote_ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AGPushNote_ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		299C5683190F867300C8AECF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		299C568B190F867300C8AECF /* AGPushNote_ExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AGPushNote_ExampleTests-Info.plist"; sourceTree = "<group>"; };
-		299C568D190F867300C8AECF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		299C568F190F867300C8AECF /* AGPushNote_ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGPushNote_ExampleTests.m; sourceTree = "<group>"; };
 		299C569A190F872600C8AECF /* AGPushNoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPushNoteView.h; sourceTree = "<group>"; };
 		299C569B190F872600C8AECF /* AGPushNoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPushNoteView.m; sourceTree = "<group>"; };
 		299C569C190F872600C8AECF /* AGPushNoteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGPushNoteView.xib; sourceTree = "<group>"; };
@@ -71,16 +52,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		299C567F190F867300C8AECF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				299C5684190F867300C8AECF /* XCTest.framework in Frameworks */,
-				299C5686190F867300C8AECF /* UIKit.framework in Frameworks */,
-				299C5685190F867300C8AECF /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -88,7 +59,6 @@
 			isa = PBXGroup;
 			children = (
 				299C566A190F867300C8AECF /* AGPushNote_Example */,
-				299C5689190F867300C8AECF /* AGPushNote_ExampleTests */,
 				299C5663190F867300C8AECF /* Frameworks */,
 				299C5662190F867300C8AECF /* Products */,
 			);
@@ -98,7 +68,6 @@
 			isa = PBXGroup;
 			children = (
 				299C5661190F867300C8AECF /* AGPushNote_Example.app */,
-				299C5682190F867300C8AECF /* AGPushNote_ExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,24 +109,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		299C5689190F867300C8AECF /* AGPushNote_ExampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				299C568F190F867300C8AECF /* AGPushNote_ExampleTests.m */,
-				299C568A190F867300C8AECF /* Supporting Files */,
-			);
-			path = AGPushNote_ExampleTests;
-			sourceTree = "<group>";
-		};
-		299C568A190F867300C8AECF /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				299C568B190F867300C8AECF /* AGPushNote_ExampleTests-Info.plist */,
-				299C568C190F867300C8AECF /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		299C5699190F870700C8AECF /* PushNote View */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,24 +139,6 @@
 			productReference = 299C5661190F867300C8AECF /* AGPushNote_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		299C5681190F867300C8AECF /* AGPushNote_ExampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 299C5696190F867300C8AECF /* Build configuration list for PBXNativeTarget "AGPushNote_ExampleTests" */;
-			buildPhases = (
-				299C567E190F867300C8AECF /* Sources */,
-				299C567F190F867300C8AECF /* Frameworks */,
-				299C5680190F867300C8AECF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				299C5688190F867300C8AECF /* PBXTargetDependency */,
-			);
-			name = AGPushNote_ExampleTests;
-			productName = AGPushNote_ExampleTests;
-			productReference = 299C5682190F867300C8AECF /* AGPushNote_ExampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -215,11 +148,6 @@
 				CLASSPREFIX = AG;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Aviel Gross";
-				TargetAttributes = {
-					299C5681190F867300C8AECF = {
-						TestTargetID = 299C5660190F867300C8AECF;
-					};
-				};
 			};
 			buildConfigurationList = 299C565C190F867300C8AECF /* Build configuration list for PBXProject "AGPushNote_Example" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -235,7 +163,6 @@
 			projectRoot = "";
 			targets = (
 				299C5660190F867300C8AECF /* AGPushNote_Example */,
-				299C5681190F867300C8AECF /* AGPushNote_ExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -249,14 +176,6 @@
 				299C567D190F867300C8AECF /* Images.xcassets in Resources */,
 				299C566F190F867300C8AECF /* InfoPlist.strings in Resources */,
 				299C5678190F867300C8AECF /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		299C5680190F867300C8AECF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				299C568E190F867300C8AECF /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,23 +193,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		299C567E190F867300C8AECF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				299C5690190F867300C8AECF /* AGPushNote_ExampleTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		299C5688190F867300C8AECF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 299C5660190F867300C8AECF /* AGPushNote_Example */;
-			targetProxy = 299C5687190F867300C8AECF /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		299C566D190F867300C8AECF /* InfoPlist.strings */ = {
@@ -307,14 +210,6 @@
 				299C5677190F867300C8AECF /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		299C568C190F867300C8AECF /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				299C568D190F867300C8AECF /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -418,46 +313,6 @@
 			};
 			name = Release;
 		};
-		299C5697190F867300C8AECF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AGPushNote_Example.app/AGPushNote_Example";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AGPushNote_Example/AGPushNote_Example-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "AGPushNote_ExampleTests/AGPushNote_ExampleTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		299C5698190F867300C8AECF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AGPushNote_Example.app/AGPushNote_Example";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AGPushNote_Example/AGPushNote_Example-Prefix.pch";
-				INFOPLIST_FILE = "AGPushNote_ExampleTests/AGPushNote_ExampleTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -477,14 +332,7 @@
 				299C5695190F867300C8AECF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		299C5696190F867300C8AECF /* Build configuration list for PBXNativeTarget "AGPushNote_ExampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				299C5697190F867300C8AECF /* Debug */,
-				299C5698190F867300C8AECF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
