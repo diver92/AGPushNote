@@ -58,4 +58,5 @@ The default 5 seconds delay is set in a define in the head of the `.m` file:
 ## Credits
 
 AGNoteView was created by [Aviel Gross](http://bit.ly/aviel) in the development of [TLV Airport](https://itunes.apple.com/us/app/tel-aviv-int-airport-nml-t/id796888961?mt=8)
+
 Info Objects made by Vlad E. Borovtsov 
