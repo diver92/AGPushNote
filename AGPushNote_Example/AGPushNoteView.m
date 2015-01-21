@@ -21,7 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 
 @property (strong, nonatomic) NSTimer *closeTimer;
-@property (strong, nonatomic) NSString *currentMessage;
+@property (strong, nonatomic) AGPushNoteInfoObj *currentObject;
 @property (strong, nonatomic) NSMutableArray *pendingPushArr;
 
 @property (strong, nonatomic) void (^messageTapActionBlock)(AGPushNoteInfoObj *obj);
@@ -39,20 +39,19 @@ static AGPushNoteView *_sharedPushView;
   {
     if (!_sharedPushView){
       NSArray *nibArr = [[NSBundle mainBundle] loadNibNamed: @"AGPushNoteView" owner:self options:nil];
-      for (id currentObject in nibArr)
+      for (id each in nibArr)
       {
-        if ([currentObject isKindOfClass:[AGPushNoteView class]])
+        if ([each isKindOfClass:[AGPushNoteView class]])
         {
-          _sharedPushView = (AGPushNoteView *)currentObject;
+          _sharedPushView = (AGPushNoteView *)each;
           break;
         }
       }
-      [_sharedPushView setUpUI];
+      [_sharedPushView setupUI];
     }
     return _sharedPushView;
   }
-  // to avoid compiler warning
-  return nil;
+  return nil;   // to avoid compiler warning
 }
 
 + (void)setDelegateForPushNote:(id<AGPushNoteViewDelegate>)delegate {
@@ -64,7 +63,6 @@ static AGPushNoteView *_sharedPushView;
 {
   self = [super initWithFrame:frame];
   if (self) {
-    // Initialization code
     CGRect f = self.frame;
     CGFloat width = [UIApplication sharedApplication].keyWindow.bounds.size.width;
     self.frame = CGRectMake(f.origin.x, f.origin.y, width, f.size.height);
@@ -72,7 +70,7 @@ static AGPushNoteView *_sharedPushView;
   return self;
 }
 
-- (void)setUpUI {
+- (void)setupUI {
   CGRect f = self.frame;
   CGFloat width = [UIApplication sharedApplication].keyWindow.bounds.size.width;
   CGFloat height = isIOS7? 54: f.size.height;
@@ -115,20 +113,20 @@ static AGPushNoteView *_sharedPushView;
   }
 }
 
-+ (void)showWithNotificationMessage:(NSString *)message {
-  [AGPushNoteView showWithNotificationMessage:message completion:^{
++ (void)showWithNotificationObject:(AGPushNoteInfoObj *)obj {
+  [AGPushNoteView showWithNotificationObject:obj completion:^{
     //Nothing.
   }];
 }
 
-+ (void)showWithNotificationMessage:(NSString *)message completion:(void (^)(void))completion {
++ (void)showWithNotificationObject:(AGPushNoteInfoObj *)obj completion:(void (^)(void))completion {
   
-  PUSH_VIEW.currentMessage = message;
+  PUSH_VIEW.currentObject = obj;
   
-  if (message) {
-    [PUSH_VIEW.pendingPushArr addObject:message];
+  if (obj) {
+    [PUSH_VIEW.pendingPushArr addObject:obj];
     
-    PUSH_VIEW.messageLabel.text = message;
+    PUSH_VIEW.messageLabel.text = obj.message;
     APP.window.windowLevel = UIWindowLevelStatusBar;
     
     CGRect f = PUSH_VIEW.frame;
@@ -176,10 +174,10 @@ static AGPushNoteView *_sharedPushView;
   id lastObj = [self.pendingPushArr lastObject]; //Get myself
   if (lastObj) {
     [self.pendingPushArr removeObject:lastObj]; //Remove me from arr
-    NSString *messagePendingPush = [self.pendingPushArr lastObject]; //Maybe get pending push
-    if (messagePendingPush) { //If got something - remove from arr, - than show it.
-      [self.pendingPushArr removeObject:messagePendingPush];
-      [AGPushNoteView showWithNotificationMessage:messagePendingPush completion:completion];
+    AGPushNoteInfoObj *objectPendingPush = [self.pendingPushArr lastObject]; //Maybe get pending push
+    if (objectPendingPush) { //If got something - remove from arr, - than show it.
+      [self.pendingPushArr removeObject:objectPendingPush];
+      [AGPushNoteView showWithNotificationObject:objectPendingPush completion:completion];
     } else {
       APP.window.windowLevel = UIWindowLevelNormal;
     }
@@ -194,13 +192,13 @@ static AGPushNoteView *_sharedPushView;
 }
 
 #pragma mark - Actions
-+ (void)setMessageAction:(void (^)(NSString *message))action {
++ (void)setMessageAction:(void (^)(AGPushNoteInfoObj *obj))action {
   PUSH_VIEW.messageTapActionBlock = action;
 }
 
 - (void)messageTapAction {
   if (self.messageTapActionBlock) {
-    self.messageTapActionBlock(self.currentMessage);
+    self.messageTapActionBlock(self.currentObject);
     [AGPushNoteView close];
   }
 }

@@ -19,20 +19,22 @@ static NSInteger pushCounter = 0;
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+  [super viewDidLoad];
+  // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (IBAction)pushNowAction:(UIButton *)sender {
-    [AGPushNoteView showWithNotificationMessage:[NSString stringWithFormat:@"%d", pushCounter++]];
-    [AGPushNoteView setMessageAction:^(NSString *message) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"PUSH"
-                                                        message:message
-                                                       delegate:nil
-                                              cancelButtonTitle:@"Close"
-                                              otherButtonTitles:nil];
-        [alert show];
-    }];
+  NSString *msg = [NSString stringWithFormat:@"%d message", pushCounter++];
+  AGPushNoteInfoObj *pushInfoObj = [AGPushNoteInfoObj infoObjectWithMessage:msg];
+  [AGPushNoteView showWithNotificationObject:pushInfoObj];
+  [AGPushNoteView setMessageAction:^(AGPushNoteInfoObj *object) {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"PUSH"
+                                                    message:msg
+                                                   delegate:nil
+                                          cancelButtonTitle:@"Close"
+                                          otherButtonTitles:nil];
+    [alert show];
+  }];
 }
 
 @end
